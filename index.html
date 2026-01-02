@@ -1,65 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Arsam Mughal | HTML5 Game Developer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsam Mughal | HTML5 Game Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="hero">
-  <h1>Arsam Mughal</h1>
-  <p>HTML5 Multiplayer Game Developer</p>
-  <span>JavaScript · TypeScript · Cocos · Phaser · WebGL</span>
-</header>
+<div class="container">
+    <header class="profile-intro">
+        <img src="arsam_photo.jpg" alt="Arsam Mughal" class="profile-photo">
+        <div class="intro-text">
+            <h1>Hi, I am Arsam!</h1>
+            <p>
+                I’m a <strong>Software Engineer</strong> with 3.5+ years of experience building real-time, browser-based multiplayer games. 
+                Focusing on deterministic logic and performance across 
+                <span style="color: var(--accent-color)">JavaScript, TypeScript, and WebGL</span>.
+            </p>
+        </div>
+    </header>
 
-<section class="about">
-  <h2>About Me</h2>
-  <p>
-    I’m a software engineer with 3.5+ years of experience building real-time,
-    browser-based multiplayer games. My focus is on deterministic game logic,
-    performance optimization, and smooth player experiences across web and mobile.
-  </p>
-</section>
+    <section>
+        <div class="section-header">
+            <h2 class="section-title">Selected Projects</h2>
+            <a href="https://github.com/arsammughal" class="show-all">Show all projects</a>
+        </div>
 
-<section class="projects">
-  <h2>Selected Projects</h2>
+        <div class="card-grid">
+            <a href="#" class="card">
+                <div class="card-meta">Multiplayer · Real-time</div>
+                <h3 class="card-title">Multiplayer Jackaroo</h3>
+                <p class="card-desc">4-player HTML5 game featuring AI-driven bots and server-authoritative logic for seamless turn management.</p>
+                <div class="tags">
+                    <span># Cocos Creator</span>
+                    <span># Node.js</span>
+                    <span># Socket.io</span>
+                </div>
+            </a>
 
-  <div class="project-card">
-    <h3>Multiplayer Jackaroo</h3>
-    <p>
-      4-player HTML5 game with AI-driven bots and server-authoritative logic.
-    </p>
-    <ul>
-      <li>Cocos Creator, TypeScript</li>
-      <li>Node.js, Socket.io</li>
-      <li>Turn management, reconnection</li>
-    </ul>
-    <a href="https://youtube.com" target="_blank">Watch Gameplay</a>
-  </div>
+            <a href="#" class="card">
+                <div class="card-meta">Physics · Board Game</div>
+                <h3 class="card-title">Carrom Kings</h3>
+                <p class="card-desc">Physics-based multiplayer board game with real-time synchronization and custom shot calculation logic.</p>
+                <div class="tags">
+                    <span># Phaser</span>
+                    <span># TypeScript</span>
+                    <span># WebGL</span>
+                </div>
+            </a>
+        </div>
+    </section>
 
-  <div class="project-card">
-    <h3>Carrom Kings</h3>
-    <p>
-      Physics-based multiplayer board game with real-time sync and latency handling.
-    </p>
-    <ul>
-      <li>HTML5, Phaser</li>
-      <li>Custom physics & shot calculation</li>
-    </ul>
-    <a href="https://youtube.com" target="_blank">Watch Gameplay</a>
-  </div>
+    <footer style="text-align: center; margin-top: 40px; border-top: 1px solid #333; padding-top: 40px;">
+        <p style="color: var(--text-muted)">Get in touch</p>
+        <a href="mailto:mughalarsam42@gmail.com" style="font-size: 1.2rem; font-weight: bold; color: var(--text-main)">mughalarsam42@gmail.com</a>
+        <div style="margin-top: 20px;">
+            <a href="https://linkedin.com/in/arsammughal" target="_blank" style="margin: 0 10px;">LinkedIn</a>
+            <a href="https://github.com/arsammughal" target="_blank" style="margin: 0 10px;">GitHub</a>
+        </div>
+    </footer>
+</div>
 
-</section>
-
-<footer class="contact">
-  <p>
-    📧 mughalarsam42@gmail.com  
-    · 🔗 <a href="https://linkedin.com/in/arsammughal" target="_blank">LinkedIn</a>
-  </p>
-</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
