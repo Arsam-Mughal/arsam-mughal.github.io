@@ -45,10 +45,50 @@ body {
 }
 
 .nav-logo {
-    font-weight: 700;
-    color: var(--accent-color);
-    font-size: 1.2rem;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    /* Remove the gap to have total control over spacing */
+    gap: 0;
+    cursor: pointer;
+    text-decoration: none;
+    user-select: none;
 }
+
+/* 1. We wrap the brackets in a fixed-width container */
+.nav-logo .bracket {
+    color: var(--text-muted);
+    font-weight: 300;
+    transition: all 0.3s ease;
+
+    /* This prevents the jump */
+    display: inline-block;
+    width: 25px;
+    /* Adjust this value until the spacing looks right */
+    text-align: center;
+}
+
+.nav-logo .logo-name {
+    color: var(--accent-color);
+    font-weight: 800;
+    letter-spacing: -1px;
+    /* Ensure the initials stay centered between the fixed brackets */
+    display: inline-block;
+}
+
+/* 2. Hover effect remains the same, but won't cause movement now */
+.nav-logo:hover .bracket {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.nav-logo:hover .logo-name {
+    text-shadow: 0 0 10px rgba(0, 189, 184, 0.5);
+}
+
+/* .nav-logo:hover {
+    filter: drop-shadow(0 0 8px rgba(0, 189, 184, 0.6));
+} */
 
 .nav-links a {
     margin-left: 20px;
@@ -63,14 +103,20 @@ body {
 }
 
 .nav-links .resume-btn {
-    border: 1px solid var(--accent-color);
-    padding: 5px 15px;
-    border-radius: 4px;
+    border: 1.5px solid var(--accent-color);
+    padding: 6px 18px;
+    border-radius: 6px;
     color: var(--accent-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .nav-links .resume-btn:hover {
-    background: rgba(0, 189, 184, 0.1);
+    background: var(--accent-color);
+    /* Fills the button with cyan */
+    color: #1d1d1d;
+    /* Changes text to dark for contrast */
+    box-shadow: 0 0 15px rgba(0, 189, 184, 0.4);
 }
 
 .container {
