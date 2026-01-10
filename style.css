@@ -1,142 +1,336 @@
 :root {
-            --bg-color: #1d1d1d;       /* Bassetti's signature dark background */
-            --card-bg: #252525;       /* Slightly lighter card color */
-            --text-main: #ffffff;
-            --text-muted: #969aa2;     /* Muted gray for descriptions */
-            --accent-color: #00bdb8;   /* Cyan accent color used for links/tags */
-        }
+    --bg-color: #1d1d1d;
+    /* Bassetti's signature dark background */
+    --card-bg: #252525;
+    /* Slightly lighter card color */
+    --text-main: #ffffff;
+    --text-muted: #969aa2;
+    /* Muted gray for descriptions */
+    --accent-color: #00bdb8;
+    /* Cyan accent color used for links/tags */
+}
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
 
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
+.top-nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* This adds a subtle bottom border that spans the whole screen */
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.05); */
+    background-color: rgba(29, 29, 29, 0.8);
+    /* Slight transparency */
+    backdrop-filter: blur(10px);
+    /* Modern frosted-glass effect */
+    z-index: 1000;
+}
 
-        /* Profile Intro */
-        .profile-intro {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            margin-bottom: 80px;
-        }
+.nav-content {
+    /* Keep this the same as your .container width */
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px;
+    /* Vertical and horizontal padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .profile-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            background: #333;
-            /* Placeholder: Replace with your actual image path */
-            border: 2px solid #333;
-        }
+.nav-logo {
+    font-weight: 700;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
 
-        .intro-text h1 {
-            font-size: 2.8rem;
-            margin: 0 0 15px 0;
-            letter-spacing: -1px;
-        }
+.nav-links a {
+    margin-left: 20px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
 
-        .intro-text p {
-            font-size: 1.15rem;
-            color: var(--text-main);
-            max-width: 600px;
-        }
+.nav-links a:hover {
+    color: var(--text-main);
+}
 
-        /* Sections */
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-            padding-bottom: 10px;
-        }
+.nav-links .resume-btn {
+    border: 1px solid var(--accent-color);
+    padding: 5px 15px;
+    border-radius: 4px;
+    color: var(--accent-color);
+}
 
-        .section-title {
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin: 0;
-        }
+.nav-links .resume-btn:hover {
+    background: rgba(0, 189, 184, 0.1);
+}
 
-        .show-all {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-        }
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
 
-        .show-all:hover { color: var(--accent-color); }
+/* Profile Intro */
+.profile-intro {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+}
 
-        /* Project Cards */
-        .card-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 25px;
-            margin-bottom: 60px;
-        }
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #333;
+    /* Placeholder: Replace with your actual image path */
+    border: 2px solid #333;
+}
 
-        .card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            display: block;
-            border: 1px solid transparent;
-        }
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #333;
+    border: 2px solid #333;
 
-        .card:hover {
-            transform: translateY(-4px);
-            border-color: #444;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
+    /* 1. Add a transition so the change is smooth, not instant */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
 
-        .card-meta {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+/* 2. This is what happens when you hover */
+.profile-photo:hover {
+    /* Slight zoom (1.1) and a tiny rotation (3 degrees) */
+    transform: scale(1.1) rotate(3deg);
 
-        .card-title {
-            font-size: 1.4rem;
-            margin: 0 0 12px 0;
-            color: var(--text-main);
-        }
+    /* Brightens the image slightly and adds a glow */
+    filter: brightness(1.1);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 20px rgba(0, 189, 184, 0.3);
+}
 
-        .card-desc {
-            color: var(--text-muted);
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
+.intro-text h1 {
+    font-size: 2.8rem;
+    margin: 0 0 15px 0;
+    letter-spacing: -1px;
+}
 
-        /* Tags style from Lucas's portfolio */
-        .tags {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            align-items: center;
-            color: var(--accent-color);
-            font-size: 0.9rem;
-        }
+.intro-text p {
+    font-size: 1.15rem;
+    color: var(--text-main);
+    max-width: 600px;
+}
 
-        .tag-icon {
-            opacity: 0.7;
-            width: 16px;
-        }
+.tech-stack {
+    margin-top: 14px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    max-width: 600px;
+}
 
-        /* Responsive */
-        @media (max-width: 650px) {
-            .profile-intro { flex-direction: column; text-align: center; }
-            .intro-text h1 { font-size: 2.2rem; }
-        }
+.tech-stack strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* Sections */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.show-all {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.show-all:hover {
+    color: var(--accent-color);
+}
+
+/* Project Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: block;
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #444;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-meta {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    margin: 0 0 12px 0;
+    color: var(--text-main);
+}
+
+.card-desc {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+* Mini Games Section */ .mini-games-section {
+    margin-top: 40px;
+}
+
+.mini-grid {
+    display: grid;
+    /* This creates square-ish tiles that adjust based on screen width */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.mini-card {
+    background: #212121;
+    /* Slightly darker than main cards to create depth */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.mini-card:hover {
+    border-color: var(--accent-color);
+    background: #252525;
+    transform: scale(1.02);
+}
+
+.mini-title {
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.mini-tags {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Optional: Smooth scroll for the "More Games" link */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Tags style from Lucas's portfolio */
+.tags {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
+
+.tag-icon {
+    opacity: 0.7;
+    width: 16px;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 900px;
+    position: relative;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.close-button {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+    .profile-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text h1 {
+        font-size: 2.2rem;
+    }
+}

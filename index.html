@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,61 +8,307 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<div class="container">
-    <header class="profile-intro">
-        <img src="arsam_photo.jpg" alt="Arsam Mughal" class="profile-photo">
-        <div class="intro-text">
-            <h1>Hi, I am Arsam!</h1>
-            <p>
-                I’m a <strong>Software Engineer</strong> with 3.5+ years of experience building real-time, browser-based multiplayer games. 
-                Focusing on deterministic logic and performance across 
-                <span style="color: var(--accent-color)">JavaScript, TypeScript, and WebGL</span>.
-            </p>
-        </div>
-    </header>
+    <nav class="top-nav">
+        <div class="nav-content">
+            <div class="nav-logo">AM</div>
 
-    <section>
-        <div class="section-header">
-            <h2 class="section-title">Selected Projects</h2>
-            <a href="https://github.com/arsammughal" class="show-all">Show all projects</a>
+            <div class="nav-links">
+                <a href="https://github.com/arsammughal" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/arsammughal" target="_blank">LinkedIn</a>
+                <a href="resume.pdf" class="resume-btn">Resume</a>
+            </div>
         </div>
+    </nav>
 
-        <div class="card-grid">
-            <a href="#" class="card">
-                <div class="card-meta">Multiplayer · Real-time</div>
-                <h3 class="card-title">Multiplayer Jackaroo</h3>
-                <p class="card-desc">4-player HTML5 game featuring AI-driven bots and server-authoritative logic for seamless turn management.</p>
-                <div class="tags">
-                    <span># Cocos Creator</span>
-                    <span># Node.js</span>
-                    <span># Socket.io</span>
+    <div class="container">
+        <header class="profile-intro">
+            <img src="arsam_photo.jpg" alt="Arsam Mughal" class="profile-photo">
+            <div class="intro-text">
+                <h1>Hi, I am Arsam!</h1>
+                <p>
+                    I’m a <strong>Software Engineer</strong> with 3.5+ years of experience building
+                    real-time, browser-based <strong>multiplayer games</strong>.
+                    My work focuses on deterministic gameplay systems,
+                    server-authoritative logic, and smooth player experiences using
+                    <span style="color: var(--accent-color)">JavaScript, TypeScript, and WebGL</span>.
+                </p>
+                <p class="tech-stack">
+                    <strong>Tools:</strong>
+                    Cocos Creator, Unity, Phaser ·
+                    JavaScript, TypeScript ·
+                    Node.js, Socket.io ·
+                    WebGL
+                </p>
+            </div>
+        </header>
+
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">Selected Projects</h2>
+                <a href="#more-games" class="show-all">More games</a>
+            </div>
+
+            <div class="card-grid">
+
+                <!-- <a href="#" class="card">
+                    <a href="javascript:void(0)" class="card" onclick="openModal('YOUR_YOUTUBE_ID_1')">
+                    <h3 class="card-title">Jackaroo Premium</h3>
+                    <p class="card-desc">
+                        2–4 player HTML5 card game with complex rule enforcement, deterministic turn management,
+                        and server-authoritative game state using Node.js and Socket.io.
+                    </p>
+                    <div class="tags">
+                        <span># Cocos Creator</span>
+                        <span># TypeScript</span>
+                        <span># Node.js</span>
+                        <span># Socket.io</span>
+                    </div>
+                </a> -->
+
+                <a href="javascript:void(0)" class="card" onclick="openModal('1')">
+                    <div class="card-meta">Multiplayer · Turn-based · Card Game</div>
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <h3 class="card-title">Jackaroo Premium</h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#00bdb8"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                    <p class="card-desc">
+                        2–4 player HTML5 card game with complex rule enforcement, deterministic turn management,
+                        and server-authoritative game state using Node.js and Socket.io.
+                    </p>
+                    <div class="tags">
+                        <span># Cocos Creator</span>
+                        <span># TypeScript</span>
+                        <span># Node.js</span>
+                        <span># Socket.io</span>
+                    </div>
+                </a>
+
+                <a href="javascript:void(0)" class="card" onclick="openModal('1')">
+                    <div class="card-meta">Multiplayer · Physics · Turn-based</div>
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <h3 class="card-title">Carrom Kings</h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#00bdb8"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                    <p class="card-desc">
+                        Physics-based multiplayer board game featuring deterministic shot calculation,
+                        real-time synchronization, and latency-aware gameplay logic.
+                    </p>
+                    <div class="tags">
+                        <span># Cocos Creator</span>
+                        <span># TypeScript</span>
+                        <span># Physics</span>
+                        <span># Multiplayer</span>
+                        <span># WebGL</span>
+                    </div>
+                </a>
+
+                <a href="javascript:void(0)" class="card" onclick="openModal('1')">
+                    <div class="card-meta">Multiplayer · Physics · Turn-based</div>
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <h3 class="card-title">Pool Game</h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#00bdb8"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                    <p class="card-desc">
+                        Turn-based multiplayer pool game focused on fair physics simulation,
+                        shot validation, and synchronized game state across connected clients.
+                    </p>
+                    <div class="tags">
+                        <span># HTML5</span>
+                        <span># Cocos Creator</span>
+                        <span># Physics</span>
+                        <span># Multiplayer</span>
+                    </div>
+                </a>
+
+                <a href="javascript:void(0)" class="card" onclick="openModal('1')">
+                    <div class="card-meta">Multiplayer · Score-based · 2.5D</div>
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <h3 class="card-title">Stick Cricket</h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#00bdb8"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                    <p class="card-desc">
+                        Score-based 2.5D multiplayer cricket game emphasizing timing-based mechanics,
+                        animation synchronization, and responsive input handling.
+                    </p>
+                    <div class="tags">
+                        <span># 2.5D</span>
+                        <span># Game Logic</span>
+                        <span># Multiplayer</span>
+                    </div>
+                </a>
+
+                <a href="javascript:void(0)" class="card" onclick="openModal('1')">
+                    <div class="card-meta">Multiplayer · Real-time · Sports</div>
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <h3 class="card-title">Soccer Pong / Super Kick Ball</h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#00bdb8"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                    <p class="card-desc">
+                        Fast-paced real-time multiplayer arcade sports game with continuous state updates,
+                        collision handling, and latency-tolerant synchronization.
+                    </p>
+                    <div class="tags">
+                        <span># Real-time</span>
+                        <span># Multiplayer</span>
+                        <span># Arcade</span>
+                    </div>
+                </a>
+
+                <a href="javascript:void(0)" class="card" onclick="openModal('1')">
+                    <div class="card-meta">Multiplayer · Real-time · 3D</div>
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <h3 class="card-title">F1 Racing</h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#00bdb8"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                    <p class="card-desc">
+                        Real-time 3D multiplayer racing game featuring synchronized vehicle movement,
+                        competitive gameplay logic, and performance-optimized rendering.
+                    </p>
+                    <div class="tags">
+                        <span># Unity</span>
+                        <span># 3D</span>
+                        <span># Real-time</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <section id="more-games" class="mini-games-section">
+            <div class="section-header">
+                <h2 class="section-title">More Games & Experiments</h2>
+            </div>
+
+            <div class="mini-grid">
+                <div class="mini-card">
+                    <h4 class="mini-title">Turtle Fight</h4>
+                    <p class="mini-tags">Multiplayer · Real-time</p>
                 </div>
-            </a>
 
-            <a href="#" class="card">
-                <div class="card-meta">Physics · Board Game</div>
-                <h3 class="card-title">Carrom Kings</h3>
-                <p class="card-desc">Physics-based multiplayer board game with real-time synchronization and custom shot calculation logic.</p>
-                <div class="tags">
-                    <span># Phaser</span>
-                    <span># TypeScript</span>
-                    <span># WebGL</span>
+                <div class="mini-card">
+                    <h4 class="mini-title">Asteroid Blaster</h4>
+                    <p class="mini-tags">Multiplayer · Arcade</p>
                 </div>
-            </a>
-        </div>
-    </section>
 
-    <footer style="text-align: center; margin-top: 40px; border-top: 1px solid #333; padding-top: 40px;">
-        <p style="color: var(--text-muted)">Get in touch</p>
-        <a href="mailto:mughalarsam42@gmail.com" style="font-size: 1.2rem; font-weight: bold; color: var(--text-main)">mughalarsam42@gmail.com</a>
-        <div style="margin-top: 20px;">
-            <a href="https://linkedin.com/in/arsammughal" target="_blank" style="margin: 0 10px;">LinkedIn</a>
-            <a href="https://github.com/arsammughal" target="_blank" style="margin: 0 10px;">GitHub</a>
-        </div>
-    </footer>
-</div>
+                <div class="mini-card">
+                    <h4 class="mini-title">Hexa Gone</h4>
+                    <p class="mini-tags">Multiplayer · Arcade · Phaser</p>
+                </div>
 
+                <div class="mini-card">
+                    <h4 class="mini-title">Dunk Master</h4>
+                    <p class="mini-tags">Phaser · Physics</p>
+                </div>
+
+                <div class="mini-card">
+                    <h4 class="mini-title">Ludo</h4>
+                    <p class="mini-tags">Board Game · 2-4 player · multiplayer</p>
+                </div>
+
+                <div class="mini-card">
+                    <h4 class="mini-title">Jump Kitty</h4>
+                    <p class="mini-tags">Multiplayer · Arcade · Phaser</p>
+                </div>
+
+                <div class="mini-card">
+                    <h4 class="mini-title">Carrom Free style</h4>
+                    <p class="mini-tags">Multiplayer · Board game · Physics</p>
+                </div>
+
+                <div class="mini-card">
+                    <h4 class="mini-title">Head Ball Stars</h4>
+                    <p class="mini-tags">Multiplayer · Physics · Real-time</p>
+                </div>
+
+                <div class="mini-card">
+                    <h4 class="mini-title">Go Fish</h4>
+                    <p class="mini-tags">Card Game · card Game · Turn-based</p>
+                </div>
+
+                <div class="mini-card">
+                    <h4 class="mini-title">Blade RPG</h4>
+                    <p class="mini-tags">Action · Cocos Creator</p>
+                </div>
+
+                <div class="mini-card">
+                    <h4 class="mini-title">Baloot</h4>
+                    <p class="mini-tags">Multiplayer · Card Game · Turn-based</p>
+                </div>
+
+                <div class="mini-card">
+                    <h4 class="mini-title">ONOO</h4>
+                    <p class="mini-tags">Multiplayer · Card Game · Turn-based</p>
+                </div>
+
+                <div class="mini-card">
+                    <h4 class="mini-title">Backgammon</h4>
+                    <p class="mini-tags">Multiplayer · Board Game · Turn-based</p>
+                </div>
+
+                <div class="mini-card">
+                    <h4 class="mini-title">Padel Tennis</h4>
+                    <p class="mini-tags">Multiplayer · Real-time</p>
+                </div>
+
+                <div class="mini-card">
+                    <h4 class="mini-title">City Blocks</h4>
+                    <p class="mini-tags">Puzzle · Logic</p>
+                </div>
+
+                <div class="mini-card">
+                    <h4 class="mini-title">Hero vs Zombies</h4>
+                    <p class="mini-tags">Survival · 2D</p>
+                </div>
+
+                <div class="mini-card">
+                    <h4 class="mini-title">Slingshot Drift</h4>
+                    <p class="mini-tags">Racing · Physics</p>
+                </div>
+            </div>
+        </section>
+
+        <footer style="text-align: center; margin-top: 40px; border-top: 1px solid #333; padding-top: 40px;">
+            <p style="color: var(--text-muted)">Get in touch</p>
+            <a href="mailto:mughalarsam42@gmail.com"
+                style="font-size: 1.2rem; font-weight: bold; color: var(--text-main)">mughalarsam42@gmail.com</a>
+            <div style="margin-top: 20px;">
+                <a href="https://linkedin.com/in/arsammughal" target="_blank" style="margin: 0 10px;">LinkedIn</a>
+                <a href="https://github.com/arsam-mughal" target="_blank" style="margin: 0 10px;">GitHub</a>
+            </div>
+        </footer>
+    </div>
+
+    <div id="videoModal" class="modal-overlay" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <div class="video-container">
+                <iframe id="videoPlayer" src="" frameborder="0" allow="autoplay; encrypted-media"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
