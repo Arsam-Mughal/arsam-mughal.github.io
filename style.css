@@ -21,23 +21,22 @@ body {
 
 .top-nav {
     width: 100%;
-    position: absolute;
+    position: fixed;
+    /* Changed from absolute to fixed */
     top: 0;
     left: 0;
-    /* This adds a subtle bottom border that spans the whole screen */
-    /* border-bottom: 1px solid rgba(255, 255, 255, 0.05); */
     background-color: rgba(29, 29, 29, 0.8);
-    /* Slight transparency */
     backdrop-filter: blur(10px);
-    /* Modern frosted-glass effect */
     z-index: 1000;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.05); */
+    /* Added subtle line back */
 }
 
 .nav-content {
     /* Keep this the same as your .container width */
     max-width: 850px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px 20px;
     /* Vertical and horizontal padding */
     display: flex;
     justify-content: space-between;
@@ -122,7 +121,9 @@ body {
 .container {
     max-width: 850px;
     margin: 0 auto;
-    padding: 60px 20px;
+    /* clamp(min, preferred, max) */
+    /* This makes the top space 100px on desktop and scales up to 160px on mobile */
+    padding: clamp(60px, 8vh, 120px) 20px 60px 20px;
 }
 
 /* Profile Intro */
@@ -371,6 +372,12 @@ html {
 
 /* Responsive */
 @media (max-width: 650px) {
+    .container {
+        /* On mobile, we need more space because the header 
+           takes up more vertical room relative to the screen */
+        padding-top: 140px;
+    }
+
     .profile-intro {
         flex-direction: column;
         text-align: center;
