@@ -1,7 +1,7 @@
 function openModal(videoId) {
     const modal = document.getElementById('videoModal');
     const player = document.getElementById('videoPlayer');
-    player.src = `https://www.youtube.com/embed/${"1"}?autoplay=1`;
+    player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
     modal.style.display = 'flex';
 }
 
