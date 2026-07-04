@@ -3,8 +3,8 @@ const games = {
         title: "Cowboy MultiCatch",
         url: "Playables/Cowboy_MultiCatch.html"
     },
-    Cowboy_LassoMaster: {
-        title: "Cowboy LassoMaster",
+    Cowboy_Lasso_Master: {
+        title: "Cowboy Lasso Master",
         url: "Playables/Cowboy_LassoMaster.html"
     },
     Jackaroo_KillWin: {
@@ -12,39 +12,39 @@ const games = {
         url: "Playables/Jackaroo_KillWin.html"
     },
     Jackaroo_SwapMarble: {
-        title: "Jackaroo Swap Marble",
+        title: "Jackaroo Marble Swap",
         url: "Playables/Jackaroo_SwapMarble.html"
     },
     PF1_CornV2_Extended: {
-        title: "PF1 CornV2 Extended",
+        title: "My Perfect Form Corn",
         url: "Playables/PF1_CornV2_Extended.html"
     },
     PF1_MelonV1: {
-        title: "PF1 MelonV1",
+        title: "My Perfect Form Watermelon",
         url: "Playables/PF1_MelonV1.html"
     },
     PF2_CornV2_Extended: {
-        title: "PF2 CornV2 Extended",
+        title: "My Perfect Form 2 Corn",
         url: "Playables/PF2_CornV2_Extended.html"
     },
     PF2_EggsV1: {
-        title: "PF2 EggsV1",
+        title: "My Perfect Form 2 Eggs",
         url: "Playables/PF2_EggsV1.html"
     },
     PF3_TomatoV1: {
-        title: "PF3 TomatoV1",
+        title: "My Perfect Form 3 Tomato",
         url: "Playables/PF3_TomatoV1.html"
     },       
     TP_BumperV1: {
-        title: "TP BumperV1",
+        title: "Theme Park Bumper",
         url: "Playables/TP_BumperV1.html"
     },      
     TP_WaterTubeV1: {
-        title: "TP WaterTubeV1",
+        title: "Theme Park Water Tube",
         url: "Playables/TP_WaterTubeV1.html"
     },      
     Twister_Long: {
-        title: "Twister Long",
+        title: "Twister",
         url: "Playables/Twister_Long.html"
     }
 }
