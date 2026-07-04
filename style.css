@@ -370,6 +370,45 @@ html {
     cursor: pointer;
 }
 
+.playables-preview {
+    margin-top: 70px;
+}
+
+.playables-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px;
+    background: #252525;
+    border-radius: 12px;
+    border: 1px solid #333;
+}
+
+.playables-banner h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.playables-banner p {
+    color: var(--text-muted);
+    max-width: 500px;
+}
+
+.play-btn {
+    text-decoration: none;
+    color: white;
+    background: var(--accent-color);
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: .25s;
+}
+
+.play-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 189, 184, .35);
+}
+
 /* Responsive */
 @media (max-width: 650px) {
     .container {
@@ -386,4 +425,65 @@ html {
     .intro-text h1 {
         font-size: 2.2rem;
     }
+
+    .playables-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+}
+
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.game-card {
+    background: #252525;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    transition: .25s;
+    border: 1px solid #333;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.game-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.game-card h3 {
+    margin: 18px;
+    margin-bottom: 8px;
+}
+
+.game-card p {
+    margin: 18px;
+    margin-top: 0;
+    color: var(--text-muted);
+}
+
+
+.game-frame {
+    margin-top: 30px;
+    aspect-ratio: 16/9;
+    background: #111;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.game-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
